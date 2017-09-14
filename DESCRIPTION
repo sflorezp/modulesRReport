@@ -1,14 +1,18 @@
 Package: modulesRReport
 Type: Package
-Title: Package to easily re-use Widgets and Shiny Components
+Title: Paquete para usar facilmente Widgets y componentes de multiples librerias en Shiny
 Version: 0.1.0
-Author: Sebastián Flórez Parrra <sflorezp@unal.edu.co>
-Maintainer: Sebastián Flórez Parrra <sflorezp@unal.edu.co>
-Description: This Package is used to improve and be more efficient about
-    Shiny Apps Development
+Author: SEBASTIAN FLOREZ PARRA <sflorezp@unal.edu.co>
+Maintainer: SEBASTIAN FLOREZ PARRA <sflorezp@unal.edu.co>
+Description: Este paquete es usado para ser mas eficientes a la hora de
+    desarrollar Aplicaciones en el FrameWork Shiny
 Imports:
     shiny,
-    dygraphs
+    dygraphs,
+    lubridate,
+    plotly,
+	dplyr,
+	DT
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
