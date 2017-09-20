@@ -4,16 +4,16 @@
 \alias{addGroupByType}
 \title{Agrupar Datos Por Algun Tipo y Sumar los Valores}
 \usage{
-addGroupByType(data, agrupa, columnaFecha, columnaPeriodo, columnaVal, ...)
+addGroupByType(data, groupType, dateCol, periodCol, valueCol, ...)
 }
 \arguments{
-\item{agrupa}{Tipo de Agrupamiento}
+\item{groupType}{Tipo de Agrupamiento}
 
-\item{columnaFecha}{Numero de Columna donde esta la Fecha, comenzando desde el 1}
+\item{dateCol}{Numero de Columna donde esta la Fecha, comenzando desde el 1}
 
-\item{columnaPeriodo}{Numero de Columna donde esta el Periodo, comenzando desde el 1, si los datos no tienen periodo poner valor de cero para no ser tenido en cuenta}
+\item{periodCol}{Numero de Columna donde esta el Periodo, comenzando desde el 1, si los datos no tienen periodo poner valor de cero para no ser tenido en cuenta}
 
-\item{columnaVal}{Numero de Columna donde esta el Valor que se desea Sumar, comenzando desde el 1}
+\item{valueCol}{Numero de Columna donde esta el Valor que se desea Sumar, comenzando desde el 1}
 
 \item{...}{Se deben indicar las Columnas por las cuales se desea realizar el agrupamiento}
 }

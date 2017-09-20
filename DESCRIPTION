@@ -1,11 +1,11 @@
 Package: modulesRReport
 Type: Package
-Title: Paquete para usar facilmente Widgets y componentes de multiples librerias en Shiny
+Title: Use easily Widgets, components, functions and many other packages in Shiny de multiples librerias en Shiny
 Version: 0.1.0
 Author: SEBASTIAN FLOREZ PARRA <sflorezp@unal.edu.co>
 Maintainer: SEBASTIAN FLOREZ PARRA <sflorezp@unal.edu.co>
-Description: Este paquete es usado para ser mas eficientes a la hora de
-    desarrollar Aplicaciones en el FrameWork Shiny
+Description: This package is used to improve and be more efficient about time 
+    to develop applications using Shiny Framework
 Imports:
     shiny,
     dygraphs,

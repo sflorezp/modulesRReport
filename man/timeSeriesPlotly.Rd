@@ -2,39 +2,38 @@
 % Please edit documentation in R/myModules.R
 \name{timeSeriesPlotly}
 \alias{timeSeriesPlotly}
-\title{Grafica T.S Plotly}
+\title{Plotly Time Series Chart}
 \usage{
-timeSeriesPlotly(input, output, session, datosx, datosy, titulo, ejey,
-  suavizada)
+timeSeriesPlotly(input, output, session, xdata, ydata, title, yaxis, isSmooth)
 }
 \arguments{
-\item{input}{Argumento Obligatorio}
+\item{input}{Required Param}
 
-\item{output}{Argumento Obligatorio}
+\item{output}{Required Param}
 
-\item{session}{Argumento Obligatorio}
+\item{session}{Required Param}
 
-\item{datosx}{Vector que Corresponde con las Fechas, debe estar en formato POSIXt}
+\item{xdata}{Array with Dates in POSIXt Format}
 
-\item{datosy}{Vector que Corresponde con los valores que van en el eje y}
+\item{ydata}{Array with Values}
 
-\item{titulo}{Titulo de la grafica}
+\item{title}{Title}
 
-\item{ejey}{Titulo del eje y}
+\item{yaxis}{y Axis Title}
 
-\item{suavizada}{Si su valor esta en True, debe mostrar una linea suavizada de los datos
-sino mostrata los puntos con los valores reales}
+\item{isSmooth}{When is True must be showed an Smooth Line else the Real Value}
 }
 \description{
-Esta es una funcion que sirve para generar una grafica de series de tiempo.
+This function is to generates a time series chart using Plotly Package
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de graficas usando Shiny.
-La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
-El argumento \code{datosx} tiene que ser del tipo POSIXt, \code{datosy} corresponde con los valores del ejey, el argumento \code{titulo}
-corresponde con el titulo principal de la grafica y el argumento \code{ejey} es para poner el titulo en el eje y de la grafica.
-\code{suavizada} es un parametro que indicasi se mostraran los datos con una linea suavizada o se muestran los datos reales.
-Debido a que este es un modulo, su llamado es especial, ver los ejemplos de como se debe llamar esta funcion.
+This function belongs to server.R script to easily generates a time series chart using Dygraphs.
+This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
+The \code{xdata} param must be in POSIXt format, \code{ydata} param means to y axis values, \code{title} param
+means to maint title, \code{yaxis} param is to set x axis title, \code{isSmooth} param say when must be showd and Smooth Line
+or Real Values. How it used Shiny Modules, The function will be called using the callModule function
+the first param is the function to be called, the second param is the identifier used in plotlyObjectUI("id") and the other
+params are the same after the session param. See the examples please.
 }
 \examples{
 callModule(timeSeriesPlotly, "plot1", trmDia_xts$x, trmDia_xts$y, "TRM diaria", "[COP/USD]", F)

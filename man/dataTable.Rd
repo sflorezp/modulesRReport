@@ -4,7 +4,7 @@
 \alias{dataTable}
 \title{Generar Tabla de Datos}
 \usage{
-dataTable(input, output, session, data, nomFichero)
+dataTable(input, output, session, data, fileName)
 }
 \arguments{
 \item{input}{Argumento Obligatorio}
@@ -15,7 +15,7 @@ dataTable(input, output, session, data, nomFichero)
 
 \item{data}{DataFrame con los datos que se quieren visualizar}
 
-\item{nomFichero}{Nombre que tendra el fichero al ser descargado tanto en excel como PDF}
+\item{fileName}{Nombre que tendra el fichero al ser descargado tanto en excel como PDF}
 }
 \description{
 Esta es una funcion que sirve para generar una tabla de datos.
@@ -24,7 +24,7 @@ Esta es una funcion que sirve para generar una tabla de datos.
 Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de tablas de datos en Shiny.
 La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
 El argumento \code{data} corresponde al dataFrame o set de datos que se quieren visualizar en la interfaz grafica, en la medida de lo posible
-se espera que sea un objeto del tipo DataFrame, \code{nomFichero} corresponde al nombre que el usuario desea que el fichero tenga al ser descargado.
+se espera que sea un objeto del tipo DataFrame, \code{fileName} corresponde al nombre que el usuario desea que el fichero tenga al ser descargado.
 }
 \examples{
 callModule(dataTable, "table1", data1, "TestFichero1")

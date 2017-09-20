@@ -2,31 +2,33 @@
 % Please edit documentation in R/myModules.R
 \name{timeSeriesDygraphs}
 \alias{timeSeriesDygraphs}
-\title{Grafica T.S Dygraphs}
+\title{Dygraphs Time Series Chart}
 \usage{
-timeSeriesDygraphs(input, output, session, data, titulo, ejey)
+timeSeriesDygraphs(input, output, session, data, title, yaxis)
 }
 \arguments{
-\item{input}{Argumento Obligatorio}
+\item{input}{Required Param by Shiny Modules}
 
-\item{output}{Argumento Obligatorio}
+\item{output}{Required Param by Shiny Modues}
 
-\item{session}{Argumento Obligatorio}
+\item{session}{Required Param by Shiny Modules}
 
-\item{data}{Objeto del tipo xts con los datos a graficar}
+\item{data}{Data with xts format}
 
-\item{titulo}{Titulo de la grafica}
+\item{title}{Chart Title}
 
-\item{ejey}{Titulo del eje y}
+\item{yaxis}{y axis Title}
 }
 \description{
-Esta es una funcion que sirve para generar una grafica de series de tiempo en Dygraphs.
+This function is to generates a time series chart using Dygraphs
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de graficas usando Shiny.
-La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
-El argumento \code{data} tiene que ser del tipo xts, el argumento \code{titulo} corresponde con el titulo principal de la grafica y el argumento \code{ejey}
-es para poner el titulo en el eje y de la grafica. Debido a que este es un modulo, su llamado es especial, ver los ejemplos de como se debe llamar esta funcion.
+This function belongs to server.R script to easily generates a time series chart using Dygraphs.
+This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
+The \code{data} param must be in xts format, \code{title} param means to the main title of chart and the \code{yaxis}
+param is to set the y axis title. How it used Shiny Modules, The function will be called using the callModule function
+the first param is the function to be called, the second param is the identifier used in dygraphObjectUI("id") and the other
+params are the same after the session param. See the examples please.
 }
 \examples{
 callModule(timeSeriesDygraphs, "plot1", trmDia_xts, "TRM diaria", "[COP/USD]")

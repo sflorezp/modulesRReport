@@ -2,7 +2,7 @@
 % Please edit documentation in R/myModules.R
 \name{loadBarUI}
 \alias{loadBarUI}
-\title{Widget Loading Bar}
+\title{Loading Bar Widget}
 \usage{
 loadBarUI()
 }

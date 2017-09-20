@@ -2,20 +2,19 @@
 % Please edit documentation in R/myModules.R
 \name{dateTodayUI}
 \alias{dateTodayUI}
-\title{Widget Rango de Fecha Sys.Date}
+\title{Date Only a Day Widget}
 \usage{
 dateTodayUI(id)
 }
 \arguments{
-\item{id}{Es el id del elemento a referenciar}
+\item{id}{Element Identifier}
 }
 \description{
-Esta es una funcion para obtener un widget de shiny que permite usar un combo selector de rango de fechas la fecha actual.
+This function is to obtain an Shiny Widget to generates a day Selector by default it has Sys Date.
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces
-graficas usando Shiny. La funcion solamente recibe el parametro \code{id} del elemento para poder ser referencido en el script server.R,
-Para poder ser referenciado en el script server..
+This function belongs to script UI.R elements to easily creates user interfaces.
+This function only have a parameter \code{id} to be referenced in server.R.
 }
 \examples{
 dateTodayUI("date1")

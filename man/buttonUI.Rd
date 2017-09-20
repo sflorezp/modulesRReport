@@ -2,22 +2,22 @@
 % Please edit documentation in R/myModules.R
 \name{buttonUI}
 \alias{buttonUI}
-\title{Widget para Botones}
+\title{Button Widget}
 \usage{
-buttonUI(id, nombre)
+buttonUI(id, name)
 }
 \arguments{
-\item{id}{Es el id del elemento a referenciar}
+\item{id}{Element Identifier}
 
-\item{nombre}{Es el nombre que tendra el boton}
+\item{name}{Button Name}
 }
 \description{
-Esta es una funcion para obtener un widget de shiny que permite crear un boton en Shiny.
+This function is to obtain an Shiny Widget to generates a Button to makes any action.
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces
-graficas usando Shiny. La funcion recibe el parametro \code{id} del elemento para poder ser referenciado en el script server.R,
-el parametro \code{nombre} se usara para definir el nombre que va a tener el boton
+This function belongs to script UI.R elements to easily creates user interfaces.
+This funcion has two params, \code{id} to be referenced in server.R and
+\code{name} to show in user interface the button name.
 }
 \examples{
 buttonUI("idGen","Generar")
