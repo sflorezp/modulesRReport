@@ -12,10 +12,10 @@ buttonUI(id, name)
 \item{name}{Button Name}
 }
 \description{
-This function is to obtain an Shiny Widget to generates a Button to makes any action.
+This function is to obtain an Shiny Widget to generates a Button to makes any action on user interface.
 }
 \details{
-This function belongs to script UI.R elements to easily creates user interfaces.
+This function belongs to script ui.R elements to easily creates user interfaces.
 This funcion has two params, \code{id} to be referenced in server.R and
 \code{name} to show in user interface the button name.
 }

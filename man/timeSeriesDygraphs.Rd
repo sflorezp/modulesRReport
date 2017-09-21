@@ -26,7 +26,7 @@ This function is to generates a time series chart using Dygraphs
 This function belongs to server.R script to easily generates a time series chart using Dygraphs.
 This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
 The \code{data} param must be in xts format, \code{title} param means to the main title of chart and the \code{yaxis}
-param is to set the y axis title. How it used Shiny Modules, The function will be called using the callModule function
+param is to set the y axis title. How it used Shiny Modules, The function will be called using the callModule function,
 the first param is the function to be called, the second param is the identifier used in dygraphObjectUI("id") and the other
 params are the same after the session param. See the examples please.
 }

@@ -9,15 +9,15 @@ agrupaUI(id, isHorary)
 \arguments{
 \item{id}{Element Identifier}
 
-\item{isHorary}{When the Value is TRUE begins in Horario else in Diario}
+\item{isHorary}{When the Value is TRUE begins in 'Horario' else 'Diario'}
 }
 \description{
 This function is to obtain an Shiny Widget to generates and grouping type selector with options Horario, Diario Mensual y Anual.
 }
 \details{
-This function belongs to script UI.R elements to easily creates user interfaces.
+This function belongs to script ui.R elements to easily creates user interfaces.
 This function has two parameters \code{id} to be referenced in server.R and isHorary to
-show a selector begins in Horary if it is TRUE and Diario if not.
+show a selector begins in Horary if it is TRUE else Diario.
 }
 \examples{
 agrupaUI("agrup", T)

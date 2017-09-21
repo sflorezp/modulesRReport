@@ -10,11 +10,11 @@ dateRangeTodayUI(id)
 \item{id}{Element Identifier}
 }
 \description{
-This function is to obtain an Shiny Widget to generates a Sys Date Selector.
+This function is to obtain an Shiny Widget to generates a Sys Date Selector on user interface.
 }
 \details{
-This function belongs to script UI.R elements to easily creates user interfaces.
-This function only have a parameter \code{id} to be referenced.
+This function belongs to script ui.R elements to easily creates user interfaces.
+This function only have a parameter \code{id} to be referenced in server.R.
 }
 \examples{
 dateRangeTodayUI("date1")

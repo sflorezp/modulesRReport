@@ -11,8 +11,8 @@ Imports:
     dygraphs,
     lubridate,
     plotly,
-	dplyr,
-	DT
+	  dplyr,
+	  DT
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

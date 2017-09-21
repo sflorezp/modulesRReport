@@ -7,12 +7,12 @@
 loadBarUI()
 }
 \description{
-Esta es una funcion que se activa cuando se esta realizando algun calculo.
+This function is used to generates a bussy indicator in the user interface when the app is doing any calculation
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces
-graficas usando Shiny. La funcion detecta cuando el sistema esta ocupado realizando algun calculo y muestra en pantalla
-unas barras azules que indican calculos, desaparecen cuando el sistema se libera
+This function belongs to script ui.R elements to easily creates user interfaces.
+It detects when the System is bussy doing any calculation and shows a busy indicator in the user screen, it stop when the
+calculation is finished
 }
 \examples{
 loadBarUI()

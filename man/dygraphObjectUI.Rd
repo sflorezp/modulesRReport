@@ -13,7 +13,7 @@ dygraphObjectUI(id)
 This function allows generate Dygraphs Objects e.g time series Charts.
 }
 \details{
-This function belongs to script.R script to easily creates user interfaces.
+This function belongs to ui.R to easily creates user interfaces.
 It allows showing many types of different charts that can be generated using Dygraphs Package.
 }
 \examples{

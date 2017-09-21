@@ -2,35 +2,36 @@
 % Please edit documentation in R/myModules.R
 \name{barPlotly}
 \alias{barPlotly}
-\title{Grafica de Barras en Plotly}
+\title{Plotly Bar Chart}
 \usage{
-barPlotly(input, output, session, xdata, ydata, xaxis, setElement)
+barPlotly(input, output, session, xdata, ydata, xaxis, setElement = NULL)
 }
 \arguments{
-\item{input}{Argumento Obligatorio}
+\item{input}{Required Param}
 
-\item{output}{Argumento Obligatorio}
+\item{output}{Required Param}
 
-\item{session}{Argumento Obligatorio}
+\item{session}{Required Param}
 
-\item{xdata}{Vector que Corresponde con los valores que van en el eje x, usualmente son valores numericos}
+\item{xdata}{Array with numeric values, usually is a percentage}
 
-\item{ydata}{Vector que Corresponde con los valores del eje y, usualmente deben ser nombres}
+\item{ydata}{Array with character values, usually is a name}
 
-\item{xaxis}{Titulo del eje x}
+\item{xaxis}{x Axis Title}
 
-\item{setElement}{Nombre del elemento que se quiere resaltar en la grafica}
+\item{setElement}{Element name to be highlighted}
 }
 \description{
-Esta es una funcion que sirve para generar una grafica de barras.
+This function is used to generates a bar chart using Plotly Package
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de graficas usando Shiny.
-La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
-El argumento \code{ydata} corresponde a los nombres de lo que sea que queramos comparar, \code{xdata} corresponde con los valores del ejex los cuales
-deben ser valores numericos usualmente en porcentaje, el argumento \code{xaxis} corresponde con el titulo del eje x se muestran los datos reales.
-\code{setElement} Sirve para setear un elemento que se quiera resaltar, en caso de no querer resaltar ninguno no enviar nada en este argumento.
-Debido a que este es un modulo, su llamado es especial, ver los ejemplos de como se debe llamar esta funcion.
+This function belongs to server.R script to easily generates a bar chart using Dygraphs.
+This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
+The \code{ydata} param means to names in y axis, \code{xdata} param is realted to x axis values, usually it must a percentage,
+the \code{xaxis} param is to set x axis title, the \code{setElement} param is used to set a element name to be highlighted in the chart.
+How it used Shiny Modules, The function will be called using the callModule function, in
+the first param is the function to be called, the second param is the identifier used in plotlyObjectUI("id") and the other
+params are the same after the session param. See the examples please.
 }
 \examples{
 callModule(barPlotly, "plot1", data1$x, data2$y, "Participacion \%", "ISGG")

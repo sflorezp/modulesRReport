@@ -17,21 +17,21 @@ timeSeriesPlotly(input, output, session, xdata, ydata, title, yaxis, isSmooth)
 
 \item{ydata}{Array with Values}
 
-\item{title}{Title}
+\item{title}{Main Title}
 
 \item{yaxis}{y Axis Title}
 
 \item{isSmooth}{When is True must be showed an Smooth Line else the Real Value}
 }
 \description{
-This function is to generates a time series chart using Plotly Package
+This function is used to generates time series charts using Plotly Package
 }
 \details{
 This function belongs to server.R script to easily generates a time series chart using Dygraphs.
 This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
 The \code{xdata} param must be in POSIXt format, \code{ydata} param means to y axis values, \code{title} param
-means to maint title, \code{yaxis} param is to set x axis title, \code{isSmooth} param say when must be showd and Smooth Line
-or Real Values. How it used Shiny Modules, The function will be called using the callModule function
+means to maint title, \code{yaxis} param is to set y axis title, \code{isSmooth} param say when must be show and Smooth Line
+or Real Values. How it used Shiny Modules, The function will be called using the callModule function, in
 the first param is the function to be called, the second param is the identifier used in plotlyObjectUI("id") and the other
 params are the same after the session param. See the examples please.
 }

@@ -2,28 +2,29 @@
 % Please edit documentation in R/myModules.R
 \name{addGroupByType}
 \alias{addGroupByType}
-\title{Agrupar Datos Por Algun Tipo y Sumar los Valores}
+\title{Group Data By Time Agrupation and Sum Any Column Value}
 \usage{
 addGroupByType(data, groupType, dateCol, periodCol, valueCol, ...)
 }
 \arguments{
-\item{groupType}{Tipo de Agrupamiento}
+\item{data}{Data Frame}
 
-\item{dateCol}{Numero de Columna donde esta la Fecha, comenzando desde el 1}
+\item{groupType}{Time Agrupation}
 
-\item{periodCol}{Numero de Columna donde esta el Periodo, comenzando desde el 1, si los datos no tienen periodo poner valor de cero para no ser tenido en cuenta}
+\item{dateCol}{Date Column Number were is the Date of the Data Frame}
 
-\item{valueCol}{Numero de Columna donde esta el Valor que se desea Sumar, comenzando desde el 1}
+\item{periodCol}{Period Column Number were is the Period of the Data Frame in case that it be with 'Horario' Time Agrupation}
 
-\item{...}{Se deben indicar las Columnas por las cuales se desea realizar el agrupamiento}
+\item{valueCol}{Value Column Number were is the Value of the Data Frame to be summarized}
+
+\item{...}{After valueCol Param can be referenciated one or more column numbers to be grouped}
 }
 \description{
-Esta funcion sirve para agrupar datos de un dataFrame por algun tipo de agrupamiento y sumar los valores de la columna indicada en uno de sus parametros,
-la flexibilidad de esta funcion radica en que permite agrupar por el numero de columnas que el usuario requiera#' @param data Set de Datos
+This function belongs to script server.R and is used to group Data Frames for any Time Agrupation and Sum Any Column Values,
+This function is very useful because is possible group by one or more columns.
 }
 \details{
-Esta funcion sirve como ayuda a la hora de realizar calculos que requieran agrupar informacion y permite indicar
-cual es la columna que se quiere sumar y cuales son las columndas por las cuales se quieren agrupar los datos
+This function belongs to server.R script to easily realize operations to group data by any time agrupation
 }
 \examples{
 addGroupByType(trmDiaria, "Mensual", 1, 0, 2, "FECHA")

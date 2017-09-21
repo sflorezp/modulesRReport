@@ -13,7 +13,7 @@ plotlyObjectUI(id)
 This function is to generates a time series chart using Dygraphs
 }
 \details{
-This function belongs to script.R script to easily creates user interfaces.
+This function belongs to ui.R to easily creates user interfaces.
 It allows showing many types of different charts that can be generated using Plotly Package.
 }
 \examples{

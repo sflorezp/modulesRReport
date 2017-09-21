@@ -10,10 +10,10 @@ dateTodayUI(id)
 \item{id}{Element Identifier}
 }
 \description{
-This function is to obtain an Shiny Widget to generates a day Selector by default it has Sys Date.
+This function is to obtain an Shiny Widget to generates a day Selector, Sys Date by default.
 }
 \details{
-This function belongs to script UI.R elements to easily creates user interfaces.
+This function belongs to script ui.R elements to easily creates user interfaces.
 This function only have a parameter \code{id} to be referenced in server.R.
 }
 \examples{

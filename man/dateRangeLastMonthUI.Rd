@@ -2,7 +2,7 @@
 % Please edit documentation in R/myModules.R
 \name{dateRangeLastMonthUI}
 \alias{dateRangeLastMonthUI}
-\title{Date past month Range Widget}
+\title{Date Past Month Range Widget}
 \usage{
 dateRangeLastMonthUI(id)
 }
@@ -10,11 +10,11 @@ dateRangeLastMonthUI(id)
 \item{id}{Element Identifier}
 }
 \description{
-This function is to obtain an Shiny Widget to generates a Past month Selector.
+This function is to obtain an Shiny Widget to generates a Past month Selector on user interface.
 }
 \details{
-This function belongs to script UI.R elements to easily creates user interfaces.
-This function only have a parameter \code{id} to be referenced.
+This function belongs to script ui.R elements to easily creates user interfaces.
+This function only have a parameter \code{id} to be referenced in server.R.
 }
 \examples{
 dateRangeLastMonthUI("date1")

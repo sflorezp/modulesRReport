@@ -2,29 +2,32 @@
 % Please edit documentation in R/myModules.R
 \name{dataTable}
 \alias{dataTable}
-\title{Generar Tabla de Datos}
+\title{Generates Data Table}
 \usage{
 dataTable(input, output, session, data, fileName)
 }
 \arguments{
-\item{input}{Argumento Obligatorio}
+\item{input}{Required Argument}
 
-\item{output}{Argumento Obligatorio}
+\item{output}{Required Argument}
 
-\item{session}{Argumento Obligatorio}
+\item{session}{Required Argument}
 
-\item{data}{DataFrame con los datos que se quieren visualizar}
+\item{data}{DataFrame to ve visualized}
 
-\item{fileName}{Nombre que tendra el fichero al ser descargado tanto en excel como PDF}
+\item{fileName}{File Name when the Data Table is downloaded}
 }
 \description{
-Esta es una funcion que sirve para generar una tabla de datos.
+This function is used to generates a Data Table
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de tablas de datos en Shiny.
-La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
-El argumento \code{data} corresponde al dataFrame o set de datos que se quieren visualizar en la interfaz grafica, en la medida de lo posible
-se espera que sea un objeto del tipo DataFrame, \code{fileName} corresponde al nombre que el usuario desea que el fichero tenga al ser descargado.
+This function belongs to server.R script to easily generates a bar chart using Dygraphs.
+This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
+The \code{data} param is the data frame to ve visualized as a Data Table in the user interface, \code{fileName} param is the name of the file
+when the user click the downlaod button.
+How it used Shiny Modules, The function will be called using the callModule function, in
+the first param is the function to be called, the second param is the identifier used in dataTableUI("id") and the other
+params are the same after the session param. See the examples please.
 }
 \examples{
 callModule(dataTable, "table1", data1, "TestFichero1")

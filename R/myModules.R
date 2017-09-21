@@ -1,9 +1,9 @@
 #' @import shiny
 #' @title SyS Date Range Widget
-#' @description This function is to obtain an Shiny Widget to generates a Sys Date Selector.
+#' @description This function is to obtain an Shiny Widget to generates a Sys Date Selector on user interface.
 #' @param id Element Identifier
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
-#' This function only have a parameter \code{id} to be referenced.
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
+#' This function only have a parameter \code{id} to be referenced in server.R.
 #' @examples
 #' dateRangeTodayUI("date1")
 #' dateRangeTodayUI("date2")
@@ -19,11 +19,11 @@ dateRangeTodayUI <- function(id) {
 
 #' @import shiny
 #' @import lubridate
-#' @title Date past month Range Widget
-#' @description This function is to obtain an Shiny Widget to generates a Past month Selector.
+#' @title Date Past Month Range Widget
+#' @description This function is to obtain an Shiny Widget to generates a Past month Selector on user interface.
 #' @param id Element Identifier
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
-#' This function only have a parameter \code{id} to be referenced.
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
+#' This function only have a parameter \code{id} to be referenced in server.R.
 #' @examples
 #' dateRangeLastMonthUI("date1")
 #' dateRangeLastMonthUI("date2")
@@ -39,11 +39,11 @@ dateRangeLastMonthUI <- function(id) {
 
 #' @import shiny
 #' @import lubridate
-#' @title Date past year Range Widget
-#' @description This function is to obtain an Shiny Widget to generates a Past year Selector.
+#' @title Date Past Year Range Widget
+#' @description This function is to obtain an Shiny Widget to generates a Past year Selector on user interface.
 #' @param id Element Identifier
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
-#' This function only have a parameter \code{id} to be referenced.
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
+#' This function only have a parameter \code{id} to be referenced in server.R.
 #' @examples
 #' dateRangeLastYearUI("date1")
 #' dateRangeLastYearUI("date2")
@@ -59,9 +59,9 @@ dateRangeLastYearUI <- function(id) {
 
 #' @import shiny
 #' @title Date Only a Day Widget
-#' @description This function is to obtain an Shiny Widget to generates a day Selector by default it has Sys Date.
+#' @description This function is to obtain an Shiny Widget to generates a day Selector, Sys Date by default.
 #' @param id Element Identifier
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
 #' This function only have a parameter \code{id} to be referenced in server.R.
 #' @examples
 #' dateTodayUI("date1")
@@ -74,10 +74,10 @@ dateTodayUI <- function(id) {
 
 #' @import shiny
 #' @title Button Widget
-#' @description This function is to obtain an Shiny Widget to generates a Button to makes any action.
+#' @description This function is to obtain an Shiny Widget to generates a Button to makes any action on user interface.
 #' @param id Element Identifier
 #' @param name Button Name
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
 #' This funcion has two params, \code{id} to be referenced in server.R and
 #' \code{name} to show in user interface the button name.
 #' @examples
@@ -92,10 +92,10 @@ buttonUI <- function(id, name) {
 #' @title Grouping Types Widget
 #' @description This function is to obtain an Shiny Widget to generates and grouping type selector with options Horario, Diario Mensual y Anual.
 #' @param id Element Identifier
-#' @param isHorary When the Value is TRUE begins in Horario else in Diario
-#' @details This function belongs to script UI.R elements to easily creates user interfaces.
+#' @param isHorary When the Value is TRUE begins in 'Horario' else 'Diario'
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
 #' This function has two parameters \code{id} to be referenced in server.R and isHorary to
-#' show a selector begins in Horary if it is TRUE and Diario if not.
+#' show a selector begins in Horary if it is TRUE else Diario.
 #' @examples
 #' agrupaUI("agrup", T)
 #' agrupaUI("agrup", F)
@@ -124,7 +124,7 @@ agrupaUI <- function(id, isHorary) {
 #' @title Dygraphs Objects
 #' @description This function allows generate Dygraphs Objects e.g time series Charts.
 #' @param id Element Identifier
-#' @details This function belongs to script.R script to easily creates user interfaces.
+#' @details This function belongs to ui.R to easily creates user interfaces.
 #' It allows showing many types of different charts that can be generated using Dygraphs Package.
 #' @examples
 #' dygraphObjectUI("plot1")
@@ -170,7 +170,7 @@ timeSeriesDygraphs <- function(input, output, session, data, title, yaxis) {
 #' @title Plotly Objects
 #' @description This function is to generates a time series chart using Dygraphs
 #' @param id Element Identifier
-#' @details This function belongs to script.R script to easily creates user interfaces.
+#' @details This function belongs to ui.R to easily creates user interfaces.
 #' It allows showing many types of different charts that can be generated using Plotly Package.
 #' @examples
 #' plotlyObjectUI("plot1")
@@ -183,7 +183,7 @@ plotlyObjectUI <- function(id) {
 
 #' @import plotly
 #' @title Plotly Time Series Chart
-#' @description This function is usted to generates a time series chart using Plotly Package
+#' @description This function is used to generates time series charts using Plotly Package
 #' @param input Required Param
 #' @param output Required Param
 #' @param session Required Param
@@ -195,7 +195,7 @@ plotlyObjectUI <- function(id) {
 #' @details This function belongs to server.R script to easily generates a time series chart using Dygraphs.
 #' This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
 #' The \code{xdata} param must be in POSIXt format, \code{ydata} param means to y axis values, \code{title} param
-#' means to maint title, \code{yaxis} param is to set y axis title, \code{isSmooth} param say when must be showd and Smooth Line
+#' means to maint title, \code{yaxis} param is to set y axis title, \code{isSmooth} param say when must be show and Smooth Line
 #' or Real Values. How it used Shiny Modules, The function will be called using the callModule function, in
 #' the first param is the function to be called, the second param is the identifier used in plotlyObjectUI("id") and the other
 #' params are the same after the session param. See the examples please.
@@ -219,7 +219,7 @@ timeSeriesPlotly <- function(input, output, session, xdata, ydata, title, yaxis,
 
 #' @import plotly
 #' @title Plotly Bar Chart
-#' @description This function is usted to generates a bar chart using Plotly Package
+#' @description This function is used to generates a bar chart using Plotly Package
 #' @param input Required Param
 #' @param output Required Param
 #' @param session Required Param
@@ -238,17 +238,17 @@ timeSeriesPlotly <- function(input, output, session, xdata, ydata, title, yaxis,
 #' callModule(barPlotly, "plot1", data1$x, data2$y, "Participacion %", "ISGG")
 #' callModule(barPlotly, "plot2", data1$x, data2$y, "Ingresos %")
 #' @export
-barPlotly <- function(input, output, session, xdata, ydata, xaxis, setElement) {
+barPlotly <- function(input, output, session, xdata, ydata, xaxis, setElement = NULL) {
 
 }
 
 #' @import shiny
 #' @import DT
 #' @title Data Table Widget
-#' @description This function is used to generates a Data Table With PDF and Xlsx Buttons to Download using DT Package
-#' @param id Es el id del elemento a referenciar
-#' @details Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces,
-#' sirve para generar una grafica de Serie de Tiempo usando el Packete DT
+#' @description This function is used to generates a Data Table With PDF and xlsx Buttons to Download using DT Package
+#' @param id Element Identifier
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
+#' This funcion has only one param \code{id} to be referenced in server.R
 #' @examples
 #' dataTableUI("plot1")
 #' dataTableUI("plot2")
@@ -259,17 +259,20 @@ dataTableUI <- function(id) {
 }
 
 #' @import DT
-#' @title Generar Tabla de Datos
-#' @description Esta es una funcion que sirve para generar una tabla de datos.
-#' @param input Argumento Obligatorio
-#' @param output Argumento Obligatorio
-#' @param session Argumento Obligatorio
-#' @param data DataFrame con los datos que se quieren visualizar
-#' @param fileName Nombre que tendra el fichero al ser descargado tanto en excel como PDF
-#' @details Esta funcion hace parte del set de elementos a usar en el script server.R para facilitar la generacion de tablas de datos en Shiny.
-#' La funcion tiene tres argumentos obligatorios \code{input}, \code{output}, \code{session}, estos siempre los usan los modulos en Shiny.
-#' El argumento \code{data} corresponde al dataFrame o set de datos que se quieren visualizar en la interfaz grafica, en la medida de lo posible
-#' se espera que sea un objeto del tipo DataFrame, \code{fileName} corresponde al nombre que el usuario desea que el fichero tenga al ser descargado.
+#' @title Generates Data Table
+#' @description This function is used to generates a Data Table
+#' @param input Required Argument
+#' @param output Required Argument
+#' @param session Required Argument
+#' @param data DataFrame to ve visualized
+#' @param fileName File Name when the Data Table is downloaded
+#' @details This function belongs to server.R script to easily generates a bar chart using Dygraphs.
+#' This function has three required params \code{input}, \code{output}, \code{session} that always is used by Shiny Modules.
+#' The \code{data} param is the data frame to ve visualized as a Data Table in the user interface, \code{fileName} param is the name of the file
+#' when the user click the downlaod button.
+#' How it used Shiny Modules, The function will be called using the callModule function, in
+#' the first param is the function to be called, the second param is the identifier used in dataTableUI("id") and the other
+#' params are the same after the session param. See the examples please.
 #' @examples
 #' callModule(dataTable, "table1", data1, "TestFichero1")
 #' callModule(dataTable, "table2", data2, "TestFichero2")
@@ -298,10 +301,10 @@ dataTable <- function(input, output, session, data, fileName) {
 
 #' @import shiny
 #' @title Loading Bar Widget
-#' @description Esta es una funcion que se activa cuando se esta realizando algun calculo.
-#' @details Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces
-#' graficas usando Shiny. La funcion detecta cuando el sistema esta ocupado realizando algun calculo y muestra en pantalla
-#' unas barras azules que indican calculos, desaparecen cuando el sistema se libera
+#' @description This function is used to generates a bussy indicator in the user interface when the app is doing any calculation
+#' @details This function belongs to script ui.R elements to easily creates user interfaces.
+#' It detects when the System is bussy doing any calculation and shows a busy indicator in the user screen, it stop when the
+#' calculation is finished
 #' @examples
 #' loadBarUI()
 #' @export
@@ -329,16 +332,16 @@ loadBarUI <- function() {
 }
 
 #' @import dplyr
-#' @title Agrupar Datos Por Algun Tipo y Sumar los Valores
-#' @description Esta funcion sirve para agrupar datos de un dataFrame por algun tipo de agrupamiento y sumar los valores de la columna indicada en uno de sus parametros,
-#' la flexibilidad de esta funcion radica en que permite agrupar por el numero de columnas que el usuario requiera#' @param data Set de Datos
-#' @param groupType Tipo de Agrupamiento
-#' @param dateCol Numero de Columna donde esta la Fecha, comenzando desde el 1
-#' @param periodCol Numero de Columna donde esta el Periodo, comenzando desde el 1, si los datos no tienen periodo poner valor de cero para no ser tenido en cuenta
-#' @param valueCol Numero de Columna donde esta el Valor que se desea Sumar, comenzando desde el 1
-#' @param ... Se deben indicar las Columnas por las cuales se desea realizar el agrupamiento
-#' @details Esta funcion sirve como ayuda a la hora de realizar calculos que requieran agrupar informacion y permite indicar
-#' cual es la columna que se quiere sumar y cuales son las columndas por las cuales se quieren agrupar los datos
+#' @title Group Data By Time Agrupation and Sum Any Column Value
+#' @description This function belongs to script server.R and is used to group Data Frames for any Time Agrupation and Sum Any Column Values,
+#' This function is very useful because is possible group by one or more columns.
+#' @param data Data Frame
+#' @param groupType Time Agrupation
+#' @param dateCol Date Column Number were is the Date of the Data Frame
+#' @param periodCol Period Column Number were is the Period of the Data Frame in case that it be with 'Horario' Time Agrupation
+#' @param valueCol Value Column Number were is the Value of the Data Frame to be summarized
+#' @param ... After valueCol Param can be referenciated one or more column numbers to be grouped
+#' @details This function belongs to server.R script to easily realize operations to group data by any time agrupation
 #' @examples
 #' addGroupByType(trmDiaria, "Mensual", 1, 0, 2, "FECHA")
 #' @export

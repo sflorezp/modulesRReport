@@ -2,20 +2,19 @@
 % Please edit documentation in R/myModules.R
 \name{dataTableUI}
 \alias{dataTableUI}
-\title{Mostrar Tabla de Datos}
+\title{Data Table Widget}
 \usage{
 dataTableUI(id)
 }
 \arguments{
-\item{id}{Es el id del elemento a referenciar}
+\item{id}{Element Identifier}
 }
 \description{
-Esta es una funcion para mostrar tablas de datos en la interfaz grafica del reporte y adicionalmente permite su
-descarga en formato xlsx o PDF
+This function is used to generates a Data Table With PDF and xlsx Buttons to Download using DT Package
 }
 \details{
-Esta funcion hace parte del set de elementos a usar en el script ui.R para facilitar la creacion de interfaces,
-sirve para generar una grafica de Serie de Tiempo usando el Packete DT
+This function belongs to script ui.R elements to easily creates user interfaces.
+This funcion has only one param \code{id} to be referenced in server.R
 }
 \examples{
 dataTableUI("plot1")
